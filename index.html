@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Quaker poems</title>
+    <title>The Infinite Quaker Poetry Anthology</title>
     <!-- CSS
          ================================================== -->
     <link rel="stylesheet" href="./style.css" />
@@ -12,7 +12,7 @@
         <![endif]-->
 	 <script src="./lines.js"></script>
   </head>
-  <body>
+  <body onLoad="makePoem();">
     <div>
       <div id="page" class="hfeed">
         <div id="top-bar">
@@ -20,7 +20,7 @@
             <div class="sixteen columns">
               <header id="branding" role="banner">
                   <hgroup>
-                    <h1>Quaker poems</h1>
+                    <h1>The Infinite Quaker Poetry Anthology</h1>
                   </hgroup>
                </header>
             </div>
@@ -31,13 +31,12 @@
     </div>
 	    <div id="poem">
       	<script>
-      	makePoem();
-      	document.write(getName());
+//      	makePoem();
   		</script>
 	    </div>
 		<div id="buttons">
 		  <p>
-	      <a href="./" title="Read another poem"><input type="button" value="Read another poem" /></a>
+	      <input type="button" value="Read another poem" onClick="makePoem();"/>
 	      </p>
 		</div>
     <div id="footer-bar">

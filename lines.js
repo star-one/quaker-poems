@@ -1,11 +1,12 @@
 function makePoem() {
       	numLines = Math.floor((Math.random()*30)+5);
-      	line = getLine();
+      	line = "";
       	repeatedLine = getLine();
       	repeatingLines = Math.floor((Math.random()*10)+1);
       	
-      	document.write ("<h2>" + repeatedLine + "</h2>");
-      	if(repeatingLines < 4) { line = repeatedLine + "<br />" + line; }
+      	line += "<h2>" + repeatedLine + "</h2>";
+      	line += getLine();
+//      	if(repeatingLines < 4) { line = repeatedLine + "<br />" + line; }
       	for(var i=0; i<numLines; i++)
       	{
       		if(numLines > 15)
@@ -31,7 +32,14 @@ function makePoem() {
       		if(punctuation == 3) { line += ":"; }
 		}
 		if(repeatingLines > 7) { line += "<br />" + repeatedLine; }
-		document.write(line);
+
+		poem = line + getName();
+		var txt=document.getElementById("poem")
+		txt.innerHTML=poem;
+		scroll(0,0)
+  		
+//		document.write(line);
+//		document.write(getName());
 }
 
 function getLine() {
