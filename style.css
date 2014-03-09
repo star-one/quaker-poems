@@ -1,0 +1,16 @@
+body {
+	font-family: Georgia, Palatino Linotype, Book Antiqua, Palatino, serif;
+	padding: 10px;
+}
+
+#poem {
+	width:600px;
+	margin:0px auto;
+	text-align:left;
+}
+
+#buttons {
+	width: 50px;
+	margin-left: auto;
+	margin-right: 100px;
+}

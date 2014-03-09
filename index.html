@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <title>Quaker poems</title>
+    <!-- CSS
+         ================================================== -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!--[if lt IE 9]>
+                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+	 <script src="./lines.js"></script>
+  </head>
+  <body>
+    <div>
+      <div id="page" class="hfeed">
+        <div id="top-bar">
+          <div class="container">
+            <div class="sixteen columns">
+              <header id="branding" role="banner">
+                  <hgroup>
+                    <h1>Quaker poems</h1>
+                  </hgroup>
+               </header>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- #branding -->
+    </div>
+	    <div id="poem">
+      	<script>
+      	makePoem();
+      	document.write(getName());
+  		</script>
+	    </div>
+		<div id="buttons">
+		  <p>
+	      <a href="./" title="Read another poem"><input type="button" value="Read another poem" /></a>
+	      </p>
+		</div>
+    <div id="footer-bar">
+      <div class="container">
+        <div class="sixteen columns">
+          <footer id="colophon" role="contentinfo">
+            <div id="footer">
+              <p>Quaker inspiration for the 21st century</p>
+            </div>
+          </footer>
+        </div>
+        <!-- #colophon -->
+      </div>
+    </div>
+	</div>
+    <!-- #page -->
+  </body>
+</html>
