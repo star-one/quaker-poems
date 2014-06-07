@@ -38,8 +38,10 @@ function makePoem() {
 		txt.innerHTML=poem;
 		scroll(0,0)
   		
-//		document.write(line);
-//		document.write(getName());
+sharetext = randomString.replace("<br /><em>", " - ");
+sharetext = sharetext.replace("</em>", "");
+
+return sharetext;
 }
 
 function getLine() {
@@ -752,7 +754,11 @@ var secondNames = [
 'Johnson',
 'Green',
 'Endersby',
-'Hawthorne',
+'Peters',
+'Sturge',
+'Fox',
+'Headley',
+'White',
 'Williams',
 'Grant',
 'McCrimmon',
@@ -768,4 +774,14 @@ randomIndex = Math.floor(Math.random() * secondNames.length);
 byline += " " + secondNames[randomIndex] + "</em></p>";
 
 return byline;
+}
+
+// About
+function updateAbout() {
+var about = "<h2>About</h2><h3>Technology</h3><p>The app has been written in HTML5 and JavaScript, and compiled into phone native code using <a href=\"javascript:window.open(encodeURI(\'http://phonegap.com/\'), \'_system\');\">Phonegap</a>; the source code is available under GPL if you want to do other useful things with it at <a href=\"javascript:window.open(encodeURI(\'https://github.com/star-one/quaker-poems\'), \'_system\');\">GitHub</a>.</p><h3>Support</h3><p>The app is free, and will always be free. If you want to support it having been made, I'd like to interest you in a few other creative projects of mine:</p><p><strong>Quaker eBooks</strong>:<input type=\"button\" value=\"So, who are these Quakers anyway?\" onClick=\"window.open(encodeURI(\'http://goo.gl/nsgFSX\'), \'_system\');\" /><input type=\"button\" value=\"Quaker Faith and Practice around the world\" onClick=\"window.open(encodeURI(\'http://goo.gl/AknkdH\'), \'_system\');\" /><br /><strong>Music</strong>:<input type=\"button\" value=\"The Winterval Conspiracy\" onClick=\"window.open(encodeURI(\'http://goo.gl/Ievpjx\'), \'_system\');\" /><br /><strong>Web</strong>:<input type=\"button\" value=\"Online Meeting for Worship\" onClick=\"window.open(encodeURI(\'http://goo.gl/DxY1T2\'), \'_system\');\" /></p><h3>Feedback</h3><p>To send feedback do please feel free to <a href=\"mailto:simon@star-one.org.uk?subject=Quaker%20poems%20feedback\">email me</a>.</p><hr />";
+
+  var txt=document.getElementById("poem")
+  txt.innerHTML=about;
+  
+  scroll(0,0)
 }

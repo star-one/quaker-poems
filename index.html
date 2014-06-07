@@ -10,9 +10,10 @@
     <!--[if lt IE 9]>
                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+     <script src="phonegap.js"></script>
 	 <script src="./lines.js"></script>
   </head>
-  <body onLoad="makePoem();">
+  <body onLoad="sharetext = makePoem();">
     <div>
       <div id="page" class="hfeed">
         <div id="top-bar">
@@ -30,14 +31,41 @@
       <!-- #branding -->
     </div>
 	    <div id="poem">
-      	<script>
-//      	makePoem();
-  		</script>
 	    </div>
 		<div id="buttons">
-		  <p>
-	      <input type="button" value="Read another poem" onClick="makePoem();"/>
-	      </p>
+		  <div>
+		  <button style="background-color: #fff;" onClick="sharetext = makePoem();">Read another poem</button>
+	      </div>
+		  <hr />
+		  <div id="about-portrait">
+		  <button style="background-color: #fff;" onclick="window.plugins.socialsharing.share(sharetext)">Share this poem</button>
+		  <button style="background-color: #fff;" onClick="updateAbout()">About this app</button>
+          </div>
+          <div id="about-landscape">
+		  <button style="background-color: #fff;" onclick="window.plugins.socialsharing.share(sharetext)">Share this poem</button>
+          <h2>About this app</h2>
+          <h3>Technology</h3>
+          <p>
+          The app has been written in HTML5 and JavaScript, and compiled into phone native code 
+          using <a href="window.open(encodeURI(\'http://phonegap.com/\'), '_system');">Phonegap</a>; the source code is available under GPL 
+          if you want to do other useful things with it at <a href="window.open(encodeURI(\'https://github.com/star-one/quaker-poems\'), '_system');">GitHub</a>.
+          </p>
+          <h3>Support</h3>
+          <p>
+          The app is free, and will always be free. If you want to support it having been made, I'd 
+          like to interest you in a few other creative projects of mine:
+          </p>
+          <p>
+          <strong>Quaker eBooks</strong>:<input type="button" value="So, who are these Quakers anyway?" onClick="window.open(encodeURI(\'http://goo.gl/nsgFSX\'), '_system');" />
+          <input type="button" value="Quaker Faith and Practice around the world" onClick="window.open(encodeURI(\'http://goo.gl/AknkdH\'), '_system');" /><br />
+          <strong>Music</strong>:<input type="button" value="The Winterval Conspiracy" onClick="window.open(encodeURI(\'http://goo.gl/Ievpjx\'), '_system');" /><br />
+          <strong>Web</strong>:<input type="button" value="Online Meeting for Worship" onClick="window.open(encodeURI(\'http://goo.gl/DxY1T2\'), '_system');" />
+          </p>
+          <h3>Feedback</h3>
+          <p>
+          To send feedback do please feel free to <a href="mailto:simon@star-one.org.uk?subject=Quaker%20poems%20feedback">email me</a>.
+          </p>
+		  </div>
 		</div>
     <div id="footer-bar">
       <div class="container">

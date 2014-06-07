@@ -12,5 +12,85 @@ body {
 	text-align:left;
 }
 
-#buttons {
+/* #Buttons
+================================================== */
+
+	.button,
+	button,
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"] {
+	  background: #e4e4fa;
+	  border: 2px solid #2d2de0;
+	  color: #444;
+	  display: inline-block;
+	  font-size: 14px;
+	  font-weight: bold;
+	  text-decoration: none;
+	  cursor: pointer;
+	  margin-bottom: 15px;
+	  margin-right: 10px;
+	  line-height: normal;
+	  padding: 10px;
+	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Segoe UI, Calibri, Arial, sans-serif; }
+
+	.button:hover,
+	button:hover,
+	input[type="submit"]:hover,
+	input[type="reset"]:hover,
+	input[type="button"]:hover {
+		color: #222;
+		background: #aaf; 
+	    border: 2px solid #00f;
+	  }
+
+	.button:active,
+	button:active,
+	input[type="submit"]:active,
+	input[type="reset"]:active,
+	input[type="button"]:active {
+	    border: 2px solid #00f;
+		background: #ccc; /* Old browsers */
+		background: #ccc -moz-linear-gradient(top, rgba(255,255,255,.35) 0%, rgba(10,10,10,.4) 100%); /* FF3.6+ */
+		background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.35)), color-stop(100%,rgba(10,10,10,.4))); /* Chrome,Safari4+ */
+		background: #ccc -webkit-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Chrome10+,Safari5.1+ */
+		background: #ccc -o-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* Opera11.10+ */
+		background: #ccc -ms-linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* IE10+ */
+		background: #ccc linear-gradient(top, rgba(255,255,255,.35) 0%,rgba(10,10,10,.4) 100%); /* W3C */ }
+
+	.button.full-width,
+	button.full-width,
+	input[type="submit"].full-width,
+	input[type="reset"].full-width,
+	input[type="button"].full-width {
+		width: 100%;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		text-align: center; }
+
+	/* Fix for odd Mozilla border & padding issues */
+	button::-moz-focus-inner,
+	input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+	}
+
+/* Media queries for landscape / portrait in order to fulfill Apple's requirements for it to fill the screen of an iPad */
+
+@media all and (min-width: 700px) {
+	#about-portrait {
+		display: none;
+	}
+	#about-landscape {
+		display: block;
+	}
+}
+
+@media all and (max-width: 699px) {
+	#about-portrait {
+		display: block;
+	}
+	#about-landscape {
+		display: none;
+	}
 }
